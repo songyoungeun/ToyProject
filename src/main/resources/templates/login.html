@@ -23,8 +23,13 @@
       <label for="password">Password</label>
       <input type="password" id="password" name="password" value="pw88">
     </p>
-    <input type="hidden" th:name="${_csrf.parameterName}"
-    th:value="${_csrf.token}" />
+
+    <p>
+      <label>Remember-Me</label>
+      <input type="checkbox" id="remember-me" name="remember-me" /><!--remember-me 가 기본값임-->
+    </p>
+
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
     <button type="submit" class="btn">Log in</button>
   </form>
 </body>

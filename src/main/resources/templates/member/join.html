@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <title>Title</title>
 </head>
 <body>
-$END$
+  <form method="post">
+    <p>
+      <label>UID</label>
+      <input type="text" name="uid" value="nexbie"/>
+    </p>
+    <p>
+      <label>UPW</label>
+      <input type="password" name="upw" value="nexbie"/>
+    </p>
+    <p>
+      <label>UNAME</label>
+      <input type="text" name="uname" value="홍길동"/>
+    </p>
+    <p>
+      <input type="checkbox" name="roles[0].roleName" value="BASIC" > BASIC
+      <input type="checkbox" name="roles[1].roleName" value="MANAGER" > MANAGER
+      <input type="checkbox" name="roles[2].roleName" value="ADMIN"  > ADMIN
+
+    </p>
+    <input type="hidden" th:name = "${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    <button type="submit" class="btn">JOIN</button>
+  </form>
 </body>
 </html>

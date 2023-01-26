@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <p>
+        <label>UID</label>
+        <input type="text" name="uid" th:value="${member.uid}" readonly/>
+    </p>
+    <p>
+        <label>UPW</label>
+        <input type="text" name="upw" th:value="${member.upw}" readonly/>    </p>
+    <p>
+        <label>UNAME</label>
+        <input type="text" name="uname" th:value="${member.uname}" readonly/>    </p>
+    <p> [[${member.roles}]]</p>
 </body>
 </html>

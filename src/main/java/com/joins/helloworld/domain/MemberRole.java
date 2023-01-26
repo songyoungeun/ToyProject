@@ -17,5 +17,6 @@ public class MemberRole { //회원이 가지는 권한에 대한 이름을 가�
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long fno;
+//    @Column(nullable = false)
     private String roleName;
 }
